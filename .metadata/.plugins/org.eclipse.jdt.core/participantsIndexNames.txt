@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+/Users/fbr161/Work Space/java/spring/eclipse/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4022152522.index
+/restful-web-services-sec08-01/src/main/java
+/Users/fbr161/Work Space/java/spring/eclipse/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/867802819.index
+/my-first-web-app-sec07-01/src/main/java
+/Users/fbr161/Work Space/java/spring/eclipse/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2128235738.index
+/my-first-web-app-sec07-01/src/main/java
+/Users/fbr161/Work Space/java/spring/eclipse/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2849345060.index
+/my-first-web-app-sec07-01/src/main/java

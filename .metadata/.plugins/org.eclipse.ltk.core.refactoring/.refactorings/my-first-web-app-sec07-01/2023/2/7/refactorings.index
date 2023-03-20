@@ -1,0 +1,6 @@
+1676284163343	Copy file
+1676293305550	Rename resource 'login.jsp'
+1676302205774	Move 'welcome.jsp' to 'login'
+1676700208996	Copy file
+1676720868857	Copy file
+1676744261310	Extract method 'getLoggedInUsername'

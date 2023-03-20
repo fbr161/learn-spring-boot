@@ -1,0 +1,45 @@
+<%@ include file="../common/header.jspf" %>
+<%@ include file="../common/navigation.jspf" %>	
+<!--  -->
+
+<div class="container">
+	<h1>Enter Todo Details</h1>
+	<form:form method="post" modelAttribute="todo">
+	
+		<fieldset class="mb-4">
+			<form:label path="description">Description</form:label> 
+			<form:input type="text" path="description" required="required"/>
+			<form:errors path="description" cssClass="text-warning"></form:errors>
+		</fieldset>
+		
+		<fieldset class="mb-4">
+			<form:label path="target">Date</form:label> 
+			<form:input type="text" path="target" required="required"/>
+			<form:errors path="target" cssClass="text-warning"></form:errors>
+		</fieldset>
+		
+		<form:input type="hidden" path="id"/>
+		<form:input type="hidden" path="done"/>
+		<form:input type="hidden" path="username"/>
+		<input type="submit" class="btn btn-success"/>
+	
+	</form:form>
+	
+	<%-- <form method="post">
+		despcription: <input name="description" type="text">
+		<input type="submit" class="btn btn-success">
+	</form> --%>
+	
+</div>
+
+<!--  -->		
+<%@ include file="../common/footer.jspf" %>
+
+<script type="text/javascript">
+	$('#target').datepicker({
+	    format: 'yyyy-mm-dd'
+	});
+</script>
+
+
+

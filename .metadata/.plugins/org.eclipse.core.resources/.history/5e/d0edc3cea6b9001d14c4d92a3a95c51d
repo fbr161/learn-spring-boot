@@ -1,0 +1,20 @@
+package com.example.learnspringaopsec17;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.learnspringaopsec17.aop.business.BusinessService1;
+
+
+@SpringBootApplication
+public class LearnSpringAopSec17Application {
+	private BusinessService1 businessService1; 
+	
+	public LearnSpringAopSec17Application(BusinessService1 businessService1) {
+		this.businessService1 = businessService1;
+	}
+	public static void main(String[] args) {
+		SpringApplication.run(LearnSpringAopSec17Application.class, args);
+	}	
+
+}

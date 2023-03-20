@@ -1,0 +1,42 @@
+package com.example.rest.webservices.restfulwebservices.security;
+
+import static org.springframework.security.config.Customizer.withDefaults;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class SpringSecurityConfiguration {
+	
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		
+//		1) All requests should be authenticated
+		http.authorizeHttpRequests(
+				auth -> auth.anyRequest().authenticated()
+				);
+//		2) If a request is not authenticated, a web page is shown
+		http.httpBasic(withDefaults());
+		
+//		3) CSRF -> POST, PUT
+		http.csrf().disable();
+
+		
+		return http.build();
+	}
+	
+	@Bean
+	public WebMvcConfigurer corsConfigure() {
+		return new WebMvcConfigurer() {
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**")  // Enable cross-origin request handling for the specified path pattern.
+				.allowedMethods("*")		// Set the HTTP methods to allow, e.g. "GET", "POST", etc.
+				.allowedOrigins("http://localhost:3000");//Set the origins for which cross-origin requests are allowed from a browser
+			}
+		};
+	}
+
+}

@@ -1,0 +1,21 @@
+package com.example.learnspringaopsec17;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.learnspringaopsec17.aop.business.BusinessService1;
+
+@SpringBootApplication
+public class LearnSpringAopSec17Application {
+
+	
+	public static void main(String[] args) {
+		SpringApplication.run(LearnSpringAopSec17Application.class, args);
+	}
+
+	
+
+}

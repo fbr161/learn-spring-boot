@@ -1,0 +1,32 @@
+package com.in28minutes.rest.webservices.restfulwebservices.todo;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TodoController {
+
+	@Autowired
+	TodoService todoService;
+	
+	
+	@GetMapping("/todos")
+	List<Todo> retrieveAllTodos() {
+		return todoService.retrieveAll();
+	}
+	
+	@PostMapping("users/{username}/todos")
+	Todo addTodo(@PathVariable String username) {
+		String description = "Learn java";
+		LocalDate targetDate = LocalDate.now().plusDays(5); 
+		boolean done = false;
+		
+		return todoService.addTodo(username, description, targetDate, done);
+	}
+}

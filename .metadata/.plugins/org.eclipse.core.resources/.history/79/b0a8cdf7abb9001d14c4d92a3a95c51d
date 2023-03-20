@@ -1,0 +1,5 @@
+package com.example.learnaop.data;
+
+public class DataService {
+
+}

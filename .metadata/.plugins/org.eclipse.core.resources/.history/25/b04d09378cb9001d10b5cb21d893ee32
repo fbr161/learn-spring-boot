@@ -1,0 +1,5 @@
+package com.example.learnspringaopsec17.aop.data;
+
+public class DataService1 {
+
+}

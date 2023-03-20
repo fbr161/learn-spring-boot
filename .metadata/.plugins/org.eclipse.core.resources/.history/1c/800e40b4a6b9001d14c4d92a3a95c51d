@@ -1,0 +1,15 @@
+package com.example.learnspringaopsec17;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+
+@SpringBootApplication
+public class LearnSpringAopSec17Application {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LearnSpringAopSec17Application.class, args);
+		System.out.println("fuadsss");
+	}	
+
+}
